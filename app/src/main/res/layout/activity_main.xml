@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/toolbar_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/main_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progress="45"
+            android:progressDrawable="@drawable/drawable_progress"
+            android:secondaryProgress="80" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/music_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_music" />
+
+
+            <TextView
+                android:id="@+id/music_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/music_switcher"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/drawable_button"
+                android:src="@drawable/ic_play" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/music_next"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/drawable_button"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
